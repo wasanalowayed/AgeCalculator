@@ -1,0 +1,170 @@
+/*General styles*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*Body attribute: justify everithing in center 
+and gives it lenght 100% of the screen*/
+body {
+    min-height: 100vh;
+    background-color: rgb(238, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*The parent container box of the page*/
+/* rgb(131, 167, 177)
+#eaeaea*/
+.container {
+    width: 40vw;
+    height: 70vh;
+    background-color: rgb(131, 167, 177);
+    opacity: 1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/*The container of the content*/
+.box-content {}
+
+/*The title inside the box*/
+.title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    padding-top: 20px;
+    color: #FFF;
+}
+
+.fields {
+
+}
+/*Styling the input fields*/
+.input {
+    background-color: #FFF;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-radius: 28px;
+    padding: 20px ;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.25);
+}
+
+.input label {
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.input input {
+outline: none;
+border: none;
+border-bottom: 1.5px solid rgb(104, 104, 104);
+font-size: 1.1em;
+text-align: center;
+color: gray;
+
+}
+
+/*Button styles*/
+button#calculate {
+    color: #FFF;
+    width: 100%;
+    background-color:  rgb(30, 95, 110);
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-radius: 20px;
+    height: 55px;
+    margin-top: 30px;
+    transition: 0.9ms ease-in;
+    cursor: pointer;
+}
+button#calculate:hover{
+transform: scale(1.1);
+background-color: rgb(7, 56, 67);
+}
+
+/*The result styles*/ 
+.result{
+text-align: center;
+font-size: 1.4em;
+font-weight: 600;
+padding-top: 30px;
+color: #FFF;
+}
+
+/*Modal*/
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    min-width: 450px;
+    min-height: 300px;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background-color: #fff;
+    max-width: 80%;
+    z-index: 6;
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*The first section of modal*/
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 1px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+.modal-icon button{
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+.modal-icon button i{
+    color: rgb(30, 95, 110);
+    font-size: 3em;
+}
+.modal-body{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 50px;
+}
+
+.modal-body span{
+    padding-bottom: 50px;
+}
+.modal-body i {
+    color: crimson;
+    font-size: 5em;
+}
+/*overlay */
+#overlay
+{
+pointer-events: none;    
+opacity: 0;
+position: fixed;
+transition: 200ms ease-in-out;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(0,0,0,0.5);
+z-index: 2;
+
+}
+
+#overlay.active{
+    pointer-events: all;    
+    opacity: 1;
+}

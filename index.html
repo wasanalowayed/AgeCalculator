@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Age Calculator</title>
+</head>
+
+<body>
+    <section class="container">
+        <section class="box-content">
+            <section class="title">
+                <h2>Age Calculator</h2>
+            </section>
+            <section class="fields">
+                <div class="input">
+                    <label for="birth-year">Year of birth</label>
+                    <input type="number" id="birth-year" placeholder="A number">
+                </div>
+                <div class="input">
+                    <label for="month">Month of birth</label>
+                    <input type="number" id="birth-month" placeholder="A number">
+                </div>
+
+            </section>
+
+            <button id="calculate">Calculate Age</button>
+            <section class="result" id="result"> <span></span></section>
+
+        </section>
+
+
+        <div class="modal" id="modal" >
+            <div class="modal-header">
+                <div class="modal-title">
+                    Error
+                </div>
+                <div class="modal-icon">
+                    <button data-close-button class="close-button"><i class="fa-solid fa-square-xmark"></i></button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <span id="modal-comment">???</span>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+        </div>
+    </section>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
